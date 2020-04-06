@@ -1,5 +1,6 @@
-install: gem install jekyll
+language: ruby
 
+install: gem install jekyll
 
 script: jekyll build
 
@@ -8,5 +9,7 @@ deploy:
     skip_cleanup: true
     github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
     keep_history: true
+    target_branch: master
+    github_url: adharshkamath.github.io/example-site/blog
     on:
       branch: master
