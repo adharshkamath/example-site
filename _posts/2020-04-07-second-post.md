@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "First post on the site"
+title: "Second post on the site"
 date: 2020-04-07
 ---
 
