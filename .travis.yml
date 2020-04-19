@@ -1,7 +1,11 @@
 sudo: false
 language: ruby
-install: gem install jekyll
-script: jekyll build
+cache: bundler
+install: 
+  - gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)" 
+  - gem update --system
+  - bundle install 
+script: bundle exec jekyll build
 deploy:
   provider: pages
   skip_cleanup: true
