@@ -5,7 +5,7 @@ install:
   - gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)" 
   - gem update --system
   - bundle install 
-script: bundle exec jekyll build
+script: bundle exec jekyll build --destination blog_final/
 deploy:
   provider: pages
   skip_cleanup: true
