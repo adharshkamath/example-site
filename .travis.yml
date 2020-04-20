@@ -2,7 +2,7 @@ language: ruby
 
 install: gem install jekyll
 
-script: jekyll build
+script: jekyll build --destination blog_folder/
 
 deploy:
     provider: pages
